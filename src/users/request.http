@@ -1,0 +1,57 @@
+### Create new user
+
+POST https://vast-hollows-19105-f3a80b4c22fb.herokuapp.com/auth/signup
+Content-Type: application/json
+
+{
+    "email": "ta@room.com",
+    "password": "test2"
+}
+
+
+### Sign in
+POST https://vast-hollows-19105-f3a80b4c22fb.herokuapp.com/auth/signin
+Content-Type: application/json
+
+{
+    "email": "ta@room.com",
+    "password": "test2"
+}
+
+### Sign out
+POST http://localhost:3000/auth/signout
+Content-Type: application/json
+
+{
+    "email": "t22es21t222@room.com",
+    "password": "test2"
+}
+    
+
+### Get User
+
+GET http://localhost:3000/auth/1
+
+
+
+### Get All Users with email
+
+GET http://localhost:3000/auth?email=test@room.com
+
+
+### Remove User
+DELETE http://localhost:3000/auth/1
+
+
+### Update User
+PATCH http://localhost:3000/auth/4
+Content-Type: application/json
+
+{
+    "email": "new@email.com"
+}
+
+
+### Get the current user
+GET http://localhost:3000/auth/whoami
+

@@ -1,0 +1,11 @@
+### Generate migration files for dev
+npm run typeorm migration:generate src/migrations/dev-initial-schema
+
+### Generate migration files for prod
+npm run typeorm:prod migration:generate src/migrations/prod-initial-schema
+
+### Run Migration
+npm run typeorm migration:run
+
+### Revert 
+npm run typeorm:prod migration:revert
