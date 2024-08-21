@@ -17,7 +17,7 @@ PATCH http://localhost:3000/products/8692674301761
 Content-Type: application/json
 
 {
-    "isle": 7
+    "isle": 8
 }
 
 ### Upload a new image to an existing product
@@ -25,7 +25,7 @@ POST http://localhost:3000/products/8692674301761/image
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="product_image34.jpg"
+Content-Disposition: form-data; name="file"; filename="product_image1.jpg"
 Content-Type: image/jpeg
 
 < ./togg.jpeg 
