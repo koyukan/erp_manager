@@ -35,8 +35,9 @@ $ npm run test:cov
 
 ## ToDo
 
-- [] Multiple Session Support
-- [] 
+- [] Replace Session with a Permanent solution
+- [] Use mock repositories for the failing tests
+- []
 
 ## Support
 

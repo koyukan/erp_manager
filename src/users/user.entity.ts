@@ -8,7 +8,7 @@ import {
   OneToMany,
 } from 'typeorm';
 
-import { Report } from '../reports/report.entity';
+import { Product } from '../products/product.entity';
 
 @Entity()
 export class User {
@@ -24,8 +24,8 @@ export class User {
   @Column()
   email: string;
 
-  @OneToMany(() => Report, (report) => report.user)
-  reports: Report[];
+  @OneToMany(() => Product, (product) => product.user)
+  products: Product[];
 
   @AfterInsert()
   logInsert() {

@@ -1,6 +1,6 @@
 ### Create new user
 
-POST https://vast-hollows-19105-f3a80b4c22fb.herokuapp.com/auth/signup
+POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 
 
 ### Sign in
-POST https://vast-hollows-19105-f3a80b4c22fb.herokuapp.com/auth/signin
+POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {

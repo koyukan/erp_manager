@@ -14,7 +14,7 @@ async function bootstrap() {
         format: winston.format.combine(
           winston.format.timestamp(),
           winston.format.ms(),
-          nestWinstonModuleUtilities.format.nestLike('PP-Server', {
+          nestWinstonModuleUtilities.format.nestLike('ERP-Manager', {
             colors: true,
             prettyPrint: true,
             processId: true,
