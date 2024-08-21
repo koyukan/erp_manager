@@ -26,7 +26,7 @@ export class S3Service {
       Key: key,
       Body: file,
       ContentType: contentType,
-      ACL: 'authenticated-read',
+      ACL: 'private',
     };
     console.log('Uploading file to S3:', params);
 

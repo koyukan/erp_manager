@@ -1,0 +1,56 @@
+### Create new user
+
+POST https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/signup
+Content-Type: application/json
+
+{
+    "email": "ta@room.com",
+    "password": "test2"
+}
+
+
+### Sign in
+POST https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/signin
+Content-Type: application/json
+
+{
+    "email": "ta@room.com",
+    "password": "test2"
+}
+
+### Sign out
+POST https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/signout
+Content-Type: application/json
+
+{
+    "email": "t22es21t222@room.com",
+    "password": "test2"
+}
+    
+
+### Get User
+
+GET https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/1
+
+
+
+### Get All Users with email
+
+GET https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth?email=test@room.com
+
+
+### Remove User
+DELETE https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/1
+
+
+### Update User
+PATCH https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/4
+Content-Type: application/json
+
+{
+    "email": "new@email.com"
+}
+
+
+### Get the current user
+GET https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/whoami

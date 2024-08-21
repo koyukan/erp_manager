@@ -57,3 +57,7 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+
+# AWS S3
+Anayurt-S3-User_accessKeys.csv

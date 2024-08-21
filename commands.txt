@@ -9,3 +9,12 @@ npm run typeorm migration:run
 
 ### Revert 
 npm run typeorm:prod migration:revert
+
+
+### Install Heroku CLI
+curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+### Login to Heroku from CLI
+heroku auth:login
+
+### Create a database in Heroku

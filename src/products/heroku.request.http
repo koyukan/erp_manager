@@ -1,6 +1,6 @@
 ### Create a new report
 
-POST http://localhost:3000/products/create
+POST https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/products/create
 Content-Type: application/json
 
 {
@@ -13,7 +13,7 @@ Content-Type: application/json
 
 
 ### Change Report Approval Status
-PATCH http://localhost:3000/products/8692674301761
+PATCH https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/products/8692674301761
 Content-Type: application/json
 
 {
@@ -21,16 +21,16 @@ Content-Type: application/json
 }
 
 ### Upload a new image to an existing product
-POST http://localhost:3000/products/8692674301761/image
+POST https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/products/8692674301761/image
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="product_image34.jpg"
+Content-Disposition: form-data; name="file"; filename="product_image.jpeg"
 Content-Type: image/jpeg
 
-< ./togg.jpeg 
+< ./togg.jpeg
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ### Get a new estimate on an existing vehicle
 
-GET http://localhost:3000/products/8692674301761
+GET https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/products/8692674301761
