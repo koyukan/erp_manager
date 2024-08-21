@@ -43,13 +43,13 @@ export class ProductsController {
     this.logger.log('Updating product', 'ProductsController');
     return this.ProductsService.updateProduct(barcode, attrs);
   }
-
+  @UseGuards(AuthGuard)
   @Get('/:barcode')
   async getProduct(@Param('barcode') barcode: string) {
     const user = await this.ProductsService.getProduct(barcode);
     return user;
   }
-
+  @UseGuards(AuthGuard)
   @Post(':barcode/image')
   @UseInterceptors(FileInterceptor('file'))
   uploadProductImage(
