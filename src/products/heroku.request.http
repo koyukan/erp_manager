@@ -25,7 +25,7 @@ POST https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/products/86926743
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="product_image.jpeg"
+Content-Disposition: form-data; name="file"; filename="product_image32.jpeg"
 Content-Type: image/jpeg
 
 < ./togg.jpeg
