@@ -1,0 +1,32 @@
+### Process a new video
+POST http://localhost:3000/processor/process
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="input.mp4"
+Content-Type: video/mp4
+
+< ./input.mp4
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="startTime"
+
+20
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="endTime"
+
+25
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="processes"
+
+4
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="batchSize"
+
+10
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Check progress of a video processing task
+GET http://localhost:3000/processor/progress/PROCESS_ID_HERE
+
+### Get results of a completed video processing task
+GET http://localhost:3000/processor/result/PROCESS_ID_HERE

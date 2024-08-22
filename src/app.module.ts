@@ -14,6 +14,7 @@ import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
 import { TypeOrmConfigService } from './config/typeorm.config';
 import { AwsModule } from './aws/aws.module';
+import { ProcessorModule } from './processor/processor.module';
 
 const cookieSession = require('cookie-session');
 
@@ -30,6 +31,7 @@ const cookieSession = require('cookie-session');
     UsersModule,
     ProductsModule,
     AwsModule,
+    ProcessorModule,
   ],
   controllers: [AppController],
   providers: [
