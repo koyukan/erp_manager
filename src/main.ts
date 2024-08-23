@@ -31,15 +31,18 @@ async function bootstrap() {
     }),
   });
   // Enable CORS
+  // Enable CORS with more explicit configurations
   app.enableCors({
     origin: [
       'http://localhost:3000',
       'http://localhost:3001',
       'http://localhost:3002',
     ],
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   });
+
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
