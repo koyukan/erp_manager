@@ -156,6 +156,7 @@ export class ProcessorService {
 
   private async uploadResultsToS3(processId: string, outputFiles: any) {
     const s3Results = {};
+    this.logger.debug(`Uploading results to S3 for process ${processId}`);
     for (const [key, filePath] of Object.entries(outputFiles)) {
       const fileContent = fs.readFileSync(filePath as string);
       const s3Key = `results/${processId}/${path.basename(filePath as string)}`;

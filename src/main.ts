@@ -23,6 +23,20 @@ async function bootstrap() {
           }),
         ),
       }),
+      new winston.transports.File({
+        filename: 'combined.log',
+        level: 'silly',
+        format: winston.format.combine(
+          winston.format.timestamp(),
+          winston.format.ms(),
+          nestWinstonModuleUtilities.format.nestLike('ERP-Manager', {
+            colors: true,
+            prettyPrint: true,
+            processId: true,
+            appName: true,
+          }),
+        ),
+      }),
 
       // other transports...
     ],
@@ -31,6 +45,12 @@ async function bootstrap() {
     logger: WinstonModule.createLogger({
       instance: winstonInstance,
     }),
+  });
+  // Enable CORS with credentials
+  app.enableCors({
+    origin: 'http://localhost:3000', // Replace with your frontend URL
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
   });
   await app.listen(process.env.PORT || 3000);
 }
