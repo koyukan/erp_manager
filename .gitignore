@@ -61,3 +61,13 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # AWS S3
 Anayurt-S3-User_accessKeys.csv
+
+
+# Video files
+*.mp4
+
+#output files
+/output
+
+# Uploads directory
+/uploads

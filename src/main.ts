@@ -30,6 +30,12 @@ async function bootstrap() {
       instance: winstonInstance,
     }),
   });
+  // Enable CORS
+  app.enableCors({
+    origin: '*', // You should replace this with your frontend URL in production
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+  });
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
