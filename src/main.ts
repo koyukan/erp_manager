@@ -32,7 +32,7 @@ async function bootstrap() {
   });
   // Enable CORS
   app.enableCors({
-    origin: '*', // You should replace this with your frontend URL in production
+    origin: ['http://localhost:3000'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
