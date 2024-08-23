@@ -64,3 +64,9 @@ Anayurt-S3-User_accessKeys.csv
 
 # Inputfile
 input.mp4
+mini_input.mp4
+
+# Outputfolder
+/output
+# Uploads
+/uploads

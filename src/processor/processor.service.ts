@@ -87,8 +87,8 @@ export class ProcessorService {
     outputDir: string,
     processVideoDto: ProcessVideoDto,
   ) {
-    const pythonProcess = spawn('python', [
-      'barcode_processor.py',
+    const pythonProcess = spawn('python3', [
+      'child_process.py',
       '--video',
       inputPath,
       '--start-time',
@@ -98,7 +98,7 @@ export class ProcessorService {
       '--processes',
       (processVideoDto.processes || 4).toString(),
       '--batch-size',
-      (processVideoDto.batchSize || 10).toString(),
+      (processVideoDto.batchSize || 1).toString(),
       '--output-dir',
       outputDir,
     ]);

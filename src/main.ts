@@ -11,6 +11,7 @@ async function bootstrap() {
     // options of Winston
     transports: [
       new winston.transports.Console({
+        level: 'silly',
         format: winston.format.combine(
           winston.format.timestamp(),
           winston.format.ms(),
@@ -22,6 +23,7 @@ async function bootstrap() {
           }),
         ),
       }),
+
       // other transports...
     ],
   });

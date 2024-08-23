@@ -12,6 +12,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { ProcessorService } from './processor.service';
 import { ProcessVideoDto } from './dto/process-video.dto';
 import { v4 as uuidv4 } from 'uuid';
+import { Serialize } from '../interceptors/serialize.interceptor';
 
 @Controller('processor')
 export class ProcessorController {
@@ -20,11 +21,13 @@ export class ProcessorController {
   constructor(private readonly processorService: ProcessorService) {}
 
   @Post('process')
+  @Serialize(ProcessVideoDto)
   @UseInterceptors(FileInterceptor('file'))
   async processVideo(
     @UploadedFile() file: Express.Multer.File,
     @Body() processVideoDto: ProcessVideoDto,
   ) {
+    this.logger.debug('File Received');
     this.logger.debug(
       `Received file: ${file?.originalname}, size: ${file?.size}`,
     );
