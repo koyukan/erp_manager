@@ -36,7 +36,7 @@ GET https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth/1
 
 ### Get All Users with email
 
-GET https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth?email=test@room.com
+GET https://peaceful-chamber-98453-c8b3feb3fc78.herokuapp.com/auth?email=kaan@test.com
 
 
 ### Remove User
