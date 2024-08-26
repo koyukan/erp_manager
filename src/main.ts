@@ -5,6 +5,7 @@ import {
   WinstonModule,
 } from 'nest-winston';
 import * as winston from 'winston';
+import { NestExpressApplication } from '@nestjs/platform-express';
 
 async function bootstrap() {
   const winstonInstance = winston.createLogger({
@@ -25,7 +26,7 @@ async function bootstrap() {
       // other transports...
     ],
   });
-  const app = await NestFactory.create(AppModule, {
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     logger: WinstonModule.createLogger({
       instance: winstonInstance,
     }),
@@ -46,6 +47,7 @@ async function bootstrap() {
     credentials: true,
   });
 
+  app.set('trust proxy', 1); // Necessary for secure cookies
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
