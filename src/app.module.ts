@@ -51,6 +51,7 @@ export class AppModule {
         cookieSession({
           keys: [this.configService.get('COOKIE_KEY')],
           sameSite: 'None', // Allows cookies to be sent with cross-origin requests
+          secure: true, // Ensures cookies are only sent over HTTPS
         }),
       )
       .forRoutes('*');
